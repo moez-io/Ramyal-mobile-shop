@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "node --watch index.js",
     "start": "node index.js",
+    "build": "echo no build step",
     "create-admin": "node admin.js",
     "migrate:neon": "node migrate-sqlite-to-neon.js",
     "test": "node --test test/finance.test.js"
