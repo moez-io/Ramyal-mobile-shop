@@ -43,6 +43,19 @@ if (
   throw Error("Set a random JWT_SECRET of at least 32 characters");
 const app = express();
 const serverDirectory = path.dirname(fileURLToPath(import.meta.url));
+// Vercel never runs index.js, so connect to the database lazily on the first
+// API request and reuse the same connection afterwards.
+let ready;
+app.use("/api", async (req, res, next) => {
+  try {
+    ready ??= connect();
+    await ready;
+    next();
+  } catch (err) {
+    ready = undefined; // retry on the next request
+    next(err);
+  }
+});
 app.use(helmet({ contentSecurityPolicy: false }));
 app.use(express.json({ limit: "1mb" }));
 app.use(cookieParser());
