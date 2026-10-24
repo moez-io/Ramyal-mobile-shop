@@ -1,3 +1,6 @@
+"start": "node index.js",
+"build": "echo No build needed",
+"create-admin": "node admin.js",
 {
   "name": "royal-mobile-api",
   "private": true,
