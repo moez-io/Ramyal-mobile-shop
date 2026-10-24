@@ -1,15 +1,12 @@
 
 {
-  "start": "node index.js",
-"build": "echo No build needed",
-"create-admin": "node admin.js",
-  
   "name": "royal-mobile-api",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "node --watch index.js",
     "start": "node index.js",
+    "build": "echo No build needed",
     "create-admin": "node admin.js",
     "migrate:neon": "node migrate-sqlite-to-neon.js",
     "test": "node --test test/finance.test.js"
