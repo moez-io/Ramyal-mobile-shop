@@ -1,3 +1,4 @@
+"build": "echo No build needed",
 {
   "name": "royal-mobile-api",
   "private": true,
