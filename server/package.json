@@ -1,0 +1,26 @@
+{
+  "name": "royal-mobile-api",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch index.js",
+    "start": "node index.js",
+    "create-admin": "node admin.js",
+    "migrate:neon": "node migrate-sqlite-to-neon.js",
+    "test": "node --test test/finance.test.js"
+  },
+  "dependencies": {
+    "@vercel/blob": "2.4.0",
+    "bcryptjs": "^3.0.2",
+    "better-sqlite3": "^12.2.0",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.5.0",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^2.0.2",
+    "pg": "^8.16.3",
+    "zod": "^4.6.7"
+  }
+}
