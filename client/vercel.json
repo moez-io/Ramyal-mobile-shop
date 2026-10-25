@@ -1,6 +1,5 @@
 {
-  "rewrites":source": "/api/( . *)",
-   "destination": "https://ramyal-mobile-shop.vercel.app/api/$1"
+  "rewrites":": "/api/(.*)", "destination": "https://ramyal-mobile-shop.vercel.app/api/$1"
   }
  ]
 }
