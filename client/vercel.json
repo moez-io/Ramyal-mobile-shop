@@ -1,4 +1,3 @@
-```json
 {
   "rewrites": "source": "/api/(.*)",
  "destination": "https:// ramyal-mobile-shop.vercel.app/api/$1"
