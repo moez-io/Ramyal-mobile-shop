@@ -1074,11 +1074,8 @@ app.patch(
     res.json({ ok: true });
   }),
 );
-app.use(express.static(path.resolve(serverDirectory, "../client/dist")));
-app.get("*", (req, res) => {
-  if (req.path.startsWith("/api/"))
-    return res.status(404).json({ error: "Unknown endpoint" });
-  res.sendFile(path.resolve(serverDirectory, "../client/dist/index.html"));
+app.use((req, res) => {
+  res.status(404).json({ error: "Unknown API endpoint" });
 });
 app.use((err, req, res, next) => {
   const message =
