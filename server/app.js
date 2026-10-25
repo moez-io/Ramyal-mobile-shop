@@ -1074,9 +1074,9 @@ app.patch(
     res.json({ ok: true });
   }),
 );
-app.use((req, res) => {
-  res.status(404).json({ error: "Unknown API endpoint" });
-});
+app.use((req, res) =>
+  res.status(404).json({ error: "Unknown API endpoint" })
+);
 app.use((err, req, res, next) => {
   const message =
     err instanceof z.ZodError
