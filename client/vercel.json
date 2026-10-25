@@ -1,5 +1,7 @@
+```json
 {
-  "rewrites":": "/api/(.*)", "destination": "https://ramyal-mobile-shop.vercel.app/api/$1"
+  "rewrites": "source": "/api/(.*)",
+ "destination": "https:// ramyal-mobile-shop.vercel.app/api/$1"
   }
  ]
 }
