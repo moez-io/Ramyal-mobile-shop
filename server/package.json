@@ -8,6 +8,7 @@
     "start": "node index.js",
     "build": "echo No build needed",
     "create-admin": "node admin.js",
+    "reset-admin-password": "node reset-admin-password.js",
     "migrate:neon": "node migrate-sqlite-to-neon.js",
     "test": "node --test test/finance.test.js"
   },

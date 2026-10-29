@@ -11,6 +11,7 @@
     "start": "npm start -w server",
     "test": "npm test -w server",
     "create-admin": "npm run create-admin -w server",
+    "reset-admin-password": "npm run reset-admin-password -w server",
     "migrate:neon": "npm run migrate:neon -w server",
     "test:integration": "node server/test/integration.mjs",
     "format": "prettier --write client/src server/*.js server/test/*"

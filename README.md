@@ -89,6 +89,10 @@ The Vercel deployment uses Neon PostgreSQL for shared shop records and Vercel Bl
 
 Use Neon’s pooled connection string for Vercel serverless functions. Free plans have limits and can change; confirm the providers’ current terms and keep independent backups. Do not run the migration a second time against a database that already has live records.
 
+### Reset a lost admin password
+
+From the project root, run `npm run reset-admin-password`. The command updates the password for an existing admin account; it does not create another account. To reset the hosted account, first set `DATABASE_URL` in `server/.env` to the same Neon database used by Vercel. Confirm that the command reports PostgreSQL before continuing. Without `DATABASE_URL`, it will only change the local SQLite account. Use a private terminal because password input is visible.
+
 ## Features
 
 - Public catalog with search, product photos and installment quote calculator.
