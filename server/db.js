@@ -74,9 +74,12 @@ function currentConnection() {
 }
 
 async function query(sql, params = []) {
+  if (pool)
+    return (
+      transactionContext.getStore()?.connection || pool
+    ).query(sql, params);
   const connection = currentConnection();
   if (!connection) throw Error("Database is not connected");
-  if (pool) return connection.query(sql, params);
   const statement = connection.prepare(
     sql.replace(/\$\d+/g, "?").replace(/ FOR UPDATE$/, ""),
   );
